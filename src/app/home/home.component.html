@@ -1,0 +1,54 @@
+<div class="content">
+
+  <div class="busqueda">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">       
+        <mat-form-field appearance="outline" class="fieldTest">
+            <mat-label>. . . .</mat-label>
+            <input matInput placeholder="pokemon" formControlName="name" type="text">
+        </mat-form-field>
+    </form>
+  </div>
+  
+    <div *ngIf="!showImage">
+        <h2>{{data.name}}</h2>
+    </div>
+  
+    <div *ngIf="showImage">
+        <mat-card class="example-card">
+          <mat-card-header>           
+            <mat-card-title> <h3>Nombre:</h3>{{data.name}}</mat-card-title>
+            <mat-card-subtitle><h3>Tipo:</h3>{{data.types[0].type.name}}</mat-card-subtitle>
+          </mat-card-header>
+            <!--<img class="pokemonImage" mat-card-image src={{data.sprites.other.dream_world.front_default}} alt="Photo of a Shiba Inu"> -->
+            <div class="imagen">
+            <img class="pokemonImage" mat-card-image src={{data.sprites.front_default}} alt="Photo of a Shiba Inu">
+            </div>
+            <br/>
+            <mat-card-content>
+              <h3>Habilidades:</h3>
+              <ul>
+                <li *ngFor="let product of data.abilities">{{ product.ability.name }}</li>
+              </ul>
+              <h3>Estadísticas:</h3>
+              <ul>
+                  <li *ngFor="let stat of data.stats">{{ stat.stat.name }}: {{ stat.base_stat }}</li>
+              </ul>
+              <h3>Numero en Pokédex:</h3>
+              <p>{{ data.id }}</p>              
+              <h3>Altura:</h3>
+              <p>{{ data.height }} decímetros</p>
+              <h3>Peso:</h3>
+              <p>{{ data.weight }} hectogramos</p>                                  
+              <div class="move-list">
+                <h3>Movimientos:</h3>
+                <ul>
+                    <li *ngFor="let move of data.moves">
+                        <strong>{{ move.move.name }}</strong>
+                    </li>
+                </ul>
+              </div>  
+            </mat-card-content>
+          </mat-card>
+          
+    </div>
+</div>

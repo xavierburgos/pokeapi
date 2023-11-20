@@ -1,0 +1,65 @@
+.pokemonImage {
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0px; 
+    left: 200px;
+}
+
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+
+.busqueda {
+    position: absolute;     
+    right: 550px; 
+    bottom: 255px;
+}
+.imagen {
+    position: absolute; 
+    top: 100px;
+    left: 100px;
+}
+
+.example-card {
+    max-width: 500px;
+    max-height: 643px;
+    position: absolute; 
+    bottom: 409px;
+    left: 550px; 
+  }
+  
+.example-header-image {
+    background-size: cover;
+}
+
+
+.move-list {
+    max-height: 200px; 
+    overflow-y: auto;  
+    position: absolute;
+    bottom: 30px; 
+    right: -300px; 
+}
+
+mat-card-title,
+mat-card-subtitle,
+h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.move-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.move-list li {
+    margin-bottom: 5px;
+}

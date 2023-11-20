@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;   
+    background: url('src/assets/cesunpokedex.svg') center/800px no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'pokemonfont';
+    src: url('./assets/fonts/pokemonfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
